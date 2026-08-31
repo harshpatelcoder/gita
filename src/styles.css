@@ -57,6 +57,10 @@ h3 { letter-spacing: .03em; }
 .hero-actions { display: flex; align-items: center; gap: 22px; }
 .hero-actions > p { margin: 0; color: #9da8a8; font-size: 12px; line-height: 1.55; }
 .hero-actions strong { color: var(--cream); font-weight: 500; }
+.hero-proof { display: grid; grid-template-columns: repeat(4, max-content); gap: 22px; margin-top: 45px; padding-top: 20px; border-top: 1px solid rgba(243,239,231,.15); }
+.hero-proof div { display: flex; align-items: baseline; gap: 6px; }
+.hero-proof strong { color: var(--gold-light); font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 500; }
+.hero-proof span { color: #879698; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
 .hero-art { position: relative; justify-self: end; width: min(100%, 500px); transform: rotate(3deg); }
 .hero-art img { display: block; width: 100%; position: relative; z-index: 1; border-radius: 2px; box-shadow: 30px 35px 70px rgba(0,0,0,.48), -10px 0 40px rgba(200,138,36,.08); animation: coverFloat 8s ease-in-out 1.1s infinite; }
 .cover-glow { position: absolute; inset: 14% -8% 10%; background: rgba(200,138,36,.18); filter: blur(70px); animation: glowPulse 7s ease-in-out infinite; }
@@ -270,6 +274,7 @@ h3 { letter-spacing: .03em; }
   .hero-price { margin-bottom: 20px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 15px; }
   .hero-actions .button { width: 100%; }
+  .hero-proof { grid-template-columns: repeat(2, max-content); gap: 14px 22px; margin-top: 34px; }
   .hero-art { width: min(86vw, 390px); margin-top: 40px; }
   .cover-note { right: -30px; font-size: 8px; }
   .problems { padding-bottom: 90px; }

@@ -94,11 +94,12 @@ function Hero() {
         <p className="hero-subtitle">{PRODUCT.subtitle}</p>
         <p className="hero-description">A practical modern guide to timeless Gita wisdom — built for distraction, pressure, uncertainty and the everyday battles of modern life.</p>
         <div className="hero-price"><span>Digital eBook</span><strong>{PRODUCT.price}</strong><del>{PRODUCT.originalPrice}</del><b>{PRODUCT.discount}</b></div>
-        <div className="hero-actions">
-          <CheckoutLink dataCta="hero">GET THE EBOOK — {PRODUCT.price} <span>↗</span></CheckoutLink>
-          <p><strong>Instant Digital Access</strong><br />Read on your phone, tablet or laptop.</p>
+          <div className="hero-actions">
+            <CheckoutLink dataCta="hero">GET THE EBOOK — {PRODUCT.price} <span>↗</span></CheckoutLink>
+            <p><strong>Instant Digital Access</strong><br />Read on your phone, tablet or laptop.</p>
+          </div>
+          <div className="hero-proof" aria-label="What's included in the eBook"><div><strong>102</strong><span>pages</span></div><div><strong>30</strong><span>lessons</span></div><div><strong>09</strong><span>practical tools</span></div><div><strong>30</strong><span>day challenge</span></div></div>
         </div>
-      </div>
       <div className="hero-art reveal delay" aria-label="The Gita for Modern Life eBook cover">
         <div className="cover-glow" />
         <img src={PRODUCT.coverImage} alt="The Gita for Modern Life eBook cover" fetchPriority="high" />
