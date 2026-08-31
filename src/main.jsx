@@ -78,7 +78,7 @@ function Header() {
       <a href="#inside" onClick={close}>What's inside</a>
       <a href="#how-it-works" onClick={close}>How it works</a>
       <a href="#faq" onClick={close}>FAQ</a>
-      <CheckoutLink className="button button-small" dataCta="navbar" onClick={close}>GET THE EBOOK</CheckoutLink>
+      <CheckoutLink className="button button-small" dataCta="navbar" onClick={close}>GET THE EBOOK · {PRODUCT.price}</CheckoutLink>
     </nav>
   </header>;
 }
@@ -98,6 +98,7 @@ function Hero() {
             <CheckoutLink dataCta="hero">GET THE EBOOK — {PRODUCT.price} <span>↗</span></CheckoutLink>
             <p><strong>Instant Digital Access</strong><br />Read on your phone, tablet or laptop.</p>
           </div>
+          <div className="hero-reassurance"><span>No prior knowledge required</span><i>·</i><span>Beginner-friendly</span><i>·</i><span>English eBook</span></div>
           <div className="hero-proof" aria-label="What's included in the eBook"><div><strong>102</strong><span>pages</span></div><div><strong>30</strong><span>lessons</span></div><div><strong>09</strong><span>practical tools</span></div><div><strong>30</strong><span>day challenge</span></div></div>
         </div>
       <div className="hero-art reveal delay" aria-label="The Gita for Modern Life eBook cover">
@@ -203,7 +204,7 @@ function ScrollReveal() {
 }
 
 function App() {
-  return <><Header /><main><Hero /><Problems /><BigIdea /><HowItWorks /><Preview /><Lessons /><Applications /><Tools /><Challenge /><Audience /><Objections /><Product /><FAQ /><FinalCTA /></main><Footer /><MobileStickyCTA /><ScrollReveal /></>;
+  return <><div className="offer-ticker" role="status" aria-label="Janmashtami special offer"><div className="ticker-track"><span>✦ JANMASHTAMI SPECIAL OFFER · <del>{PRODUCT.originalPrice}</del> <strong>{PRODUCT.price}</strong> · {PRODUCT.savings} ✦</span><span aria-hidden="true">✦ JANMASHTAMI SPECIAL OFFER · <del>{PRODUCT.originalPrice}</del> <strong>{PRODUCT.price}</strong> · {PRODUCT.savings} ✦</span></div></div><Header /><main><Hero /><Problems /><BigIdea /><HowItWorks /><Preview /><Lessons /><Applications /><Tools /><Challenge /><Audience /><Objections /><Product /><FAQ /><FinalCTA /></main><Footer /><MobileStickyCTA /><ScrollReveal /></>;
 }
 
 createRoot(document.getElementById("root")).render(<App />);
