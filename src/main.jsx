@@ -135,7 +135,7 @@ function HowItWorks() {
 }
 
 function Lessons() {
-  return <section className="section dark lessons" id="inside" data-reveal><div className="container"><p className="eyebrow">PART TWO · 30 TIMELESS LESSONS</p><h2>30 timeless lessons<br /><em>for the modern mind.</em></h2><p className="section-intro">A clean, structured way to revisit the principles that matter when life gets noisy.</p><div className="lesson-groups">{lessonGroups.map((group) => <div className="lesson-group" key={group.title}><h3>{group.title}</h3><ol>{group.items.map((item) => <li key={item}>{item}</li>)}</ol></div>)}</div></div></section>;
+  return <section className="section dark lessons" data-reveal><div className="container"><p className="eyebrow">PART TWO · 30 TIMELESS LESSONS</p><h2>30 timeless lessons<br /><em>for the modern mind.</em></h2><p className="section-intro">A clean, structured way to revisit the principles that matter when life gets noisy.</p><div className="lesson-groups">{lessonGroups.map((group) => <div className="lesson-group" key={group.title}><h3>{group.title}</h3><ol>{group.items.map((item) => <li key={item}>{item}</li>)}</ol></div>)}</div></div></section>;
 }
 
 function Applications() {
@@ -160,7 +160,7 @@ function Preview() {
     document.body.style.overflow = "hidden";
     return () => { document.removeEventListener("keydown", closeOnEscape); document.body.style.overflow = ""; };
   }, [selected]);
-  return <section className="section dark preview" data-reveal><div className="container"><div className="section-heading split-heading"><div><p className="eyebrow">A QUIET LOOK INSIDE</p><h2>Take a look<br /><em>inside.</em></h2></div><p className="section-intro">These are real pages from the eBook — not invented mockups. Click any page to view it clearly.</p></div><div className="real-preview-grid">{previews.map(([label, src]) => <figure className="real-preview" key={label}><button className="preview-open" type="button" onClick={() => setSelected({ label, src })} aria-label={`Open ${label} preview`}><img src={src} alt={`${label} page preview`} loading="lazy" /></button><figcaption><span>{label}</span><small>OPEN PREVIEW ↗</small></figcaption></figure>)}</div></div>{selected && <div className="preview-lightbox" role="dialog" aria-modal="true" aria-label={`${selected.label} enlarged preview`} onClick={(event) => { if (event.target === event.currentTarget) setSelected(null); }}><div className="lightbox-panel"><button className="lightbox-close" type="button" onClick={() => setSelected(null)} aria-label="Close preview">×</button><img src={selected.src} alt={`${selected.label} enlarged page preview`} /></div></div>}</section>;
+  return <section className="section dark preview" id="inside" data-reveal><div className="container"><div className="section-heading split-heading"><div><p className="eyebrow">A QUIET LOOK INSIDE</p><h2>Take a look<br /><em>inside.</em></h2></div><p className="section-intro">These are real pages from the eBook — not invented mockups. Click any page to view it clearly.</p></div><div className="real-preview-grid">{previews.map(([label, src]) => <figure className="real-preview" key={label}><button className="preview-open" type="button" onClick={() => setSelected({ label, src })} aria-label={`Open ${label} preview`}><img src={src} alt={`${label} page preview`} loading="lazy" /></button><figcaption><span>{label}</span><small>OPEN PREVIEW ↗</small></figcaption></figure>)}</div></div>{selected && <div className="preview-lightbox" role="dialog" aria-modal="true" aria-label={`${selected.label} enlarged preview`} onClick={(event) => { if (event.target === event.currentTarget) setSelected(null); }}><div className="lightbox-panel"><button className="lightbox-close" type="button" onClick={() => setSelected(null)} aria-label="Close preview">×</button><img src={selected.src} alt={`${selected.label} enlarged page preview`} /></div></div>}</section>;
 }
 
 function Audience() {
@@ -202,7 +202,7 @@ function ScrollReveal() {
 }
 
 function App() {
-  return <><Header /><main><Hero /><Problems /><BigIdea /><HowItWorks /><Lessons /><Applications /><Tools /><Challenge /><Preview /><Audience /><Objections /><Product /><FAQ /><FinalCTA /></main><Footer /><MobileStickyCTA /><ScrollReveal /></>;
+  return <><Header /><main><Hero /><Problems /><BigIdea /><HowItWorks /><Preview /><Lessons /><Applications /><Tools /><Challenge /><Audience /><Objections /><Product /><FAQ /><FinalCTA /></main><Footer /><MobileStickyCTA /><ScrollReveal /></>;
 }
 
 createRoot(document.getElementById("root")).render(<App />);
