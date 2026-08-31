@@ -187,7 +187,7 @@ function FinalCTA() {
 }
 
 function Footer() {
-  return <footer className="footer"><div className="container footer-top"><a className="brand" href="#top"><span>THE GITA</span><small>FOR MODERN LIFE</small></a><div className="footer-links"><a href="#top">Home</a><a href="#inside">What's Inside</a><a href="#faq">FAQ</a><a href="mailto:hello@example.com">Contact</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a><a href="#refunds">Refund Policy</a></div></div><div className="container footer-bottom"><span>© 2026 The Gita for Modern Life. All rights reserved.</span><span>ANCIENT WISDOM · MODERN LIFE</span></div></footer>;
+  return <footer className="footer"><div className="container footer-top"><a className="brand" href="#top"><span>THE GITA</span><small>FOR MODERN LIFE</small></a><div className="footer-links"><a href="#top">Home</a><a href="#inside">What's Inside</a><a href="#faq">FAQ</a><a href="mailto:harshpateln2009@gmail.com">Contact</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a><a href="#refunds">Refund Policy</a></div></div><div className="container footer-bottom"><span>© 2026 The Gita for Modern Life. All rights reserved.</span><span>ANCIENT WISDOM · MODERN LIFE</span></div></footer>;
 }
 
 function MobileStickyCTA() {
