@@ -52,7 +52,7 @@ const faqs = [
   ["What exactly am I purchasing?", "A digital eBook containing the 30 lessons, modern-life applications, practical tools, reflection worksheets and 30-day practice challenge described on this page."],
   ["Is this a physical book?", "No. It is a digital eBook."],
   ["Can I read it on my phone?", "Yes. It is designed for reading on phones, tablets and laptops."],
-  ["What language is the book in?", "English."],
+  ["What language is the book in?", "The English edition is available, and the new Hinglish edition is available too. Both are digital eBooks."],
   ["How will I receive the book?", "After purchase through SuperProfile, delivery/access will follow the configuration set up in your SuperProfile product."],
 ];
 
@@ -89,6 +89,7 @@ function Hero() {
     <div className="container hero-grid">
       <div className="hero-copy reveal">
         <div className="offer-ribbon"><span>✦</span>{PRODUCT.offerLabel}<span>✦</span></div>
+        <div className="language-pill"><span>NEW</span>{PRODUCT.languageLabel}</div>
         <p className="eyebrow">ANCIENT WISDOM. MODERN LIFE.</p>
         <h1>The wisdom you need for the life you're actually living.</h1>
         <p className="hero-subtitle">{PRODUCT.subtitle}</p>
@@ -98,7 +99,7 @@ function Hero() {
             <CheckoutLink dataCta="hero">GET THE EBOOK — {PRODUCT.price} <span>↗</span></CheckoutLink>
             <p><strong>Instant Digital Access</strong><br />Read on your phone, tablet or laptop.</p>
           </div>
-          <div className="hero-reassurance"><span>No prior knowledge required</span><i>·</i><span>Beginner-friendly</span><i>·</i><span>English eBook</span></div>
+          <div className="hero-reassurance"><span>No prior knowledge required</span><i>·</i><span>Beginner-friendly</span><i>·</i><span>English + Hinglish editions</span></div>
           <div className="hero-proof" aria-label="What's included in the eBook"><div><strong>102</strong><span>pages</span></div><div><strong>30</strong><span>lessons</span></div><div><strong>09</strong><span>practical tools</span></div><div><strong>30</strong><span>day challenge</span></div></div>
         </div>
       <div className="hero-art reveal delay" aria-label="The Gita for Modern Life eBook cover">
@@ -153,7 +154,7 @@ function Challenge() {
 }
 
 function Preview() {
-  const previews = [["A NOTE TO THE READER", "/assets/previews/reader-note.png"], ["TABLE OF CONTENTS", "/assets/previews/table-of-contents.png"], ["DAILY GITA REFLECTION", "/assets/previews/daily-reflection.png"], ["WHAT CAN I CONTROL?", "/assets/previews/control-worksheet.png"], ["HOW THIS CHALLENGE WORKS", "/assets/previews/challenge.png"]];
+  const previews = [["HINGLISH EDITION COVER", "/assets/previews/hinglish-cover.png"], ["A NOTE TO THE READER", "/assets/previews/reader-note.png"], ["TABLE OF CONTENTS", "/assets/previews/table-of-contents.png"], ["DAILY GITA REFLECTION", "/assets/previews/daily-reflection.png"], ["WHAT CAN I CONTROL?", "/assets/previews/control-worksheet.png"], ["HOW THIS CHALLENGE WORKS", "/assets/previews/challenge.png"]];
   const [selected, setSelected] = useState(null);
   useEffect(() => {
     if (!selected) return undefined;
@@ -176,7 +177,7 @@ function Objections() {
 
 function Product() {
   const included = ["30 Timeless Lessons", "Modern applications", "Chapter & verse references", "Practical action steps", "Reflection prompts", "Student / Creator / Entrepreneur / Relationship / Digital Life applications", "Practical worksheets & trackers", "30-Day Gita Practice Challenge", "Quick-reference index", "Digital eBook access"];
-  return <section className="section dark product" id="purchase" data-reveal><div className="container product-grid"><div className="product-copy"><p className="eyebrow">{PRODUCT.offerLabel}</p><h2>Everything included<br /><em>for {PRODUCT.price}.</em></h2><p className="lead">A digital book built to be read, used and returned to.</p><ul className="check-list">{included.map(item => <li key={item}><span>✓</span>{item}</li>)}</ul></div><div className="purchase-card"><div className="purchase-offer">{PRODUCT.offerLabel}</div><img className="purchase-cover" src={PRODUCT.coverImage} alt="The Gita for Modern Life eBook cover" loading="lazy" /><div className="card-kicker">THE GITA FOR MODERN LIFE</div><h3>{PRODUCT.subtitle}</h3><div className="price-row"><div className="price">{PRODUCT.price}</div><div className="price-meta"><span className="price-original">{PRODUCT.originalPrice}</span><span className="discount-badge">{PRODUCT.discount}</span></div></div><p className="saving-note">{PRODUCT.savings} <span>·</span> Digital product · English</p><CheckoutLink dataCta="pricing" className="button button-gold button-wide">GET THE EBOOK <span>↗</span></CheckoutLink><p className="secure">You'll be redirected to SuperProfile to complete your purchase.<br />Checkout powered by SuperProfile.</p></div></div></section>;
+  return <section className="section dark product" id="purchase" data-reveal><div className="container product-grid"><div className="product-copy"><p className="eyebrow">{PRODUCT.offerLabel}</p><h2>Everything included<br /><em>for {PRODUCT.price}.</em></h2><p className="lead">A digital book built to be read, used and returned to.</p><ul className="check-list">{included.map(item => <li key={item}><span>✓</span>{item}</li>)}</ul></div><div className="purchase-card"><div className="purchase-offer">{PRODUCT.offerLabel}</div><img className="purchase-cover" src={PRODUCT.coverImage} alt="The Gita for Modern Life eBook cover" loading="lazy" /><div className="card-kicker">THE GITA FOR MODERN LIFE</div><div className="card-language">{PRODUCT.languageLabel}</div><h3>{PRODUCT.subtitle}</h3><div className="price-row"><div className="price">{PRODUCT.price}</div><div className="price-meta"><span className="price-original">{PRODUCT.originalPrice}</span><span className="discount-badge">{PRODUCT.discount}</span></div></div><p className="saving-note">{PRODUCT.savings} <span>·</span> Digital product · English + Hinglish</p><CheckoutLink dataCta="pricing" className="button button-gold button-wide">GET THE EBOOK <span>↗</span></CheckoutLink><p className="secure">You'll be redirected to SuperProfile to complete your purchase.<br />Checkout powered by SuperProfile.</p></div></div></section>;
 }
 
 function FAQ() {

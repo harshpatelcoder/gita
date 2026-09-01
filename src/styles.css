@@ -53,6 +53,8 @@ h3 { letter-spacing: .03em; }
 .hero-copy { position: relative; z-index: 2; }
 .offer-ribbon { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 24px; padding: 8px 11px; border: 1px solid rgba(225,175,87,.42); color: var(--gold-light); font-size: 9px; font-weight: 700; letter-spacing: .16em; }
 .offer-ribbon span { color: var(--gold); font-size: 10px; }
+.language-pill { display: flex; align-items: center; gap: 9px; width: fit-content; margin: -10px 0 22px; color: #d7c18f; font-size: 10px; letter-spacing: .12em; font-weight: 700; }
+.language-pill span { padding: 4px 6px; color: var(--navy); background: var(--gold-light); font-size: 8px; letter-spacing: .1em; }
 .hero-subtitle { max-width: 590px; font-size: 17px; line-height: 1.6; color: #d4d6d0; }
 .hero-description { max-width: 500px; margin: 28px 0 34px; color: #9da8a8; line-height: 1.7; }
 .hero-price { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; color: #aab6b6; font-size: 12px; }
@@ -149,6 +151,7 @@ h3 { letter-spacing: .03em; }
 .purchase-card { background: var(--cream); color: var(--ink); padding: 40px; box-shadow: 18px 20px 60px rgba(0,0,0,.23); }
 .purchase-offer { display: inline-block; margin: -5px 0 25px; padding: 7px 9px; background: #a66d19; color: var(--cream); font-size: 9px; font-weight: 700; letter-spacing: .13em; }
 .card-kicker { color: #996417; font-size: 10px; letter-spacing: .15em; font-weight: 700; }
+.card-language { display: inline-block; margin-top: 10px; color: #996417; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
 .purchase-card h3 { margin: 34px 0 36px; font-family: 'Playfair Display', Georgia, serif; font-size: 27px; line-height: 1.2; font-weight: 500; letter-spacing: -.02em; }
 .price-row { display: flex; align-items: center; gap: 16px; }
 .price { color: #9a6614; font-family: 'Playfair Display', Georgia, serif; font-size: 48px; line-height: 1; }
